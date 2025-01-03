@@ -11,6 +11,9 @@ local ui = require 'harpoon.ui'
 vim.keymap.set('n', '<leader>a', mark.add_file)
 vim.keymap.set('n', '<C-e>', ui.toggle_quick_menu)
 
+-- Explorer
+vim.keymap.set('n', '<leader>e', vim.cmd.Ex)
+
 -- Navigate between files
 vim.keymap.set('n', '<leader>1', function()
   ui.nav_file(1)
@@ -24,3 +27,6 @@ end)
 vim.keymap.set('n', '<leader>4', function()
   ui.nav_file(4)
 end)
+
+-- tmux-sessionizer
+vim.keymap.set('n', '<C-f>', '<cmd>silent !tmux neww tmux-sessionizer<CR>')
