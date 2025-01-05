@@ -230,6 +230,19 @@ vim.opt.rtp:prepend(lazypath)
 -- NOTE: Here is where you install your plugins.
 require('lazy').setup({
   -- NOTE: Plugins can be added with a link (or for a github repo: 'owner/repo' link).
+  {
+    'mbbill/undotree',
+    config = function()
+      -- Keybinding to toggle Undotree
+      vim.keymap.set('n', '<leader>u', vim.cmd.UndotreeToggle)
+
+      -- Optional configurations
+      vim.g.undotree_SetFocusWhenToggle = 1
+      vim.g.undotree_SplitWidth = 30
+      vim.g.undotree_DiffAutoOpen = 1
+    end,
+  },
+
   'tpope/vim-sleuth', -- Detect tabstop and shiftwidth automatically
 
   -- NOTE: Plugins can also be added by using a table,
