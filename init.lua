@@ -114,6 +114,7 @@ vim.opt.showmode = false
 --  Schedule the setting after `UiEnter` because it can increase startup-time.
 --  Remove this option if you want your OS clipboard to remain independent.
 --  See `:help 'clipboard'`
+--
 vim.schedule(function()
   vim.opt.clipboard = 'unnamedplus'
 end)
@@ -193,6 +194,14 @@ vim.keymap.set('n', '<C-x>', '<C-w><C-c>', { desc = 'Close current split' })
 
 -- [[ Basic Autocommands ]]
 --  See `:help lua-guide-autocommands`
+
+-- This ensures the commentstring is set for terraform files
+vim.api.nvim_create_autocmd('FileType', {
+  pattern = 'terraform',
+  callback = function()
+    vim.bo.commentstring = '#%s'
+  end,
+})
 
 -- Highlight when yanking (copying) text
 --  Try it with `yap` in normal mode
