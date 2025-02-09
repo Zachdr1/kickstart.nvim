@@ -700,6 +700,9 @@ require('lazy').setup({
         'stylua', -- Used to format Lua code
         'pylsp',
         'black',
+        'terraform-ls',
+        'rust_analyzer',
+        'gopls',
       })
       require('mason-tool-installer').setup { ensure_installed = ensure_installed }
 
