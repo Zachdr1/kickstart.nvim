@@ -14,6 +14,9 @@ vim.keymap.set('n', '<C-e>', ui.toggle_quick_menu)
 -- Explorer
 vim.keymap.set('n', '<leader>e', vim.cmd.Ex)
 
+-- Oil
+vim.keymap.set('n', '-', '<CMD>Oil<CR>', { desc = 'Open parent directory' })
+
 -- Navigate between files
 vim.keymap.set('n', '<leader>1', function()
   ui.nav_file(1)
