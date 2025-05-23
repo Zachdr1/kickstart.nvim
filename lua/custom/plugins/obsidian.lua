@@ -30,7 +30,7 @@ return {
     },
 
     -- see below for full list of options 👇
-    disable_frontmatter = true,
+    disable_frontmatter = false,
     notes_subdir = '6 - Main Notes',
     new_notes_location = 'notes_subdir',
 
