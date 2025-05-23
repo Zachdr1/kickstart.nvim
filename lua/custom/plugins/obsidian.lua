@@ -31,11 +31,12 @@ return {
 
     -- see below for full list of options 👇
     disable_frontmatter = false,
-    notes_subdir = '6 - Main Notes',
+    -- disable_frontmatter = true,
+    notes_subdir = 'Unsorted Notes',
     new_notes_location = 'notes_subdir',
 
     templates = {
-      folder = '5 - Templates',
+      folder = 'Templates',
       date_format = '%Y-%m-%d',
       time_format = '%H:%M',
       -- A map for custom variables, the key should be the variable and the value a function
