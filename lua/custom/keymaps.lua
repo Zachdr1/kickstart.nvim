@@ -1,6 +1,4 @@
 local builtin = require 'telescope.builtin'
-vim.keymap.set('n', '<leader>sv', '<C-w>v', { desc = 'Open verticle split' })
-vim.keymap.set('n', '<leader>sh', '<C-w>h', { desc = 'Open horizontal split' })
 vim.keymap.set('n', '<C-p>', builtin.git_files, {})
 -- vim.keymap.set('i', 'jk', '<ESC>')
 
@@ -36,3 +34,12 @@ vim.keymap.set('n', '<C-j>', '<cmd>cnext<CR>zz')
 vim.keymap.set('n', '<C-k>', '<cmd>cprev<CR>zz')
 vim.keymap.set('n', '<leader>j', '<cmd>lnext<CR>zz')
 vim.keymap.set('n', '<leader>k', '<cmd>lprev<CR>zz')
+
+-- Clear highlights on search when pressing <Esc> in normal mode
+vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
+
+vim.keymap.set('n', '<C-h>', '<C-w><C-h>', { desc = 'Move focus to the left window' })
+vim.keymap.set('n', '<C-l>', '<C-w><C-l>', { desc = 'Move focus to the right window' })
+vim.keymap.set('n', '<C-j>', '<C-w><C-j>', { desc = 'Move focus to the lower window' })
+vim.keymap.set('n', '<C-k>', '<C-w><C-k>', { desc = 'Move focus to the upper window' })
+vim.keymap.set('n', '<C-x>', '<C-w><C-c>', { desc = 'Close current split' })
