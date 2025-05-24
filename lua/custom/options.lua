@@ -9,7 +9,7 @@ opt.number = true
 
 opt.wrap = false
 
-opt.scrolloff = 8
+opt.scrolloff = 10
 
 opt.updatetime = 50
 
