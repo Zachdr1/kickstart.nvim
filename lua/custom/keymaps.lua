@@ -43,3 +43,15 @@ vim.keymap.set('n', '<C-j>', '<cmd>cnext<CR>zz')
 vim.keymap.set('n', '<C-k>', '<cmd>cprev<CR>zz')
 vim.keymap.set('n', '<leader>j', '<cmd>lnext<CR>zz')
 vim.keymap.set('n', '<leader>k', '<cmd>lprev<CR>zz')
+
+-- custom macros
+--
+vim.api.nvim_create_augroup('PythonLogMacro', { clear = true })
+vim.api.nvim_create_autocmd('FileType', {
+  group = 'PythonLogMacro',
+  pattern = { 'python' },
+  callback = function()
+    vim.fn.setreg('l', "yologger.info(f'pA: {pA}')")
+    vim.fn.setreg('p', "yoprint(f'pA: {pA}')")
+  end,
+})
